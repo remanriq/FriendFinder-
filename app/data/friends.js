@@ -1,4 +1,4 @@
-var matchesArray = [{
+var friendsArray = [{
   Name: "Keanu Reeves",
   photo: "https://media.giphy.com/media/vg7o2ov3Nm34Y/giphy.gif",
   role: "Philanthropist and Actor",
@@ -36,7 +36,7 @@ var matchesArray = [{
 ]
 }];
 
-module.exports = matchesArray;
+module.exports = friendsArray;
 
 
 

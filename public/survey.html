@@ -28,12 +28,12 @@
 
               <div class="form-group">
                 <label for="reserve-name">Name (required) </label>
-                <input type="text" class="form-control" id="reserve-name">
+                <input type="text" class="form-control" id="name">
               </div>
 
               <div class="form-group">
-                <label for="reserve-phone">Link to Photo Image(required)</label>
-                <input type="text" class="form-control" id="reserve-phone">
+                <label for="new-photo">Link to Photo Image(required)</label>
+                <input type="text" class="form-control" id="photolink">
               </div>
 
     <div class="text-left">
@@ -41,13 +41,13 @@
       <h4 class="text-left">Your idea of fun is staying home and watching Netflix</h4>
     </div>
           <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  <button class="btn btn-default dropdown-toggle" type="button" id="ques1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     Select Answer
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a value="4">Strongly Agree</a></li>
-    <li><a value="3">Agree</a></li>
+    <li><a value="5">Strongly Agree</a></li>
+    <li><a value="4">Agree</a></li>
     <li><a value="2">Disagree</a></li>
     <li><a value="1">Strongly Disagree</a></li>
   </ul>
@@ -58,13 +58,13 @@
       <h4 class="text-left">You maintain a healthy routine and love to meditate!</h4>
     </div>
 <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  <button class="btn btn-default dropdown-toggle" type="button" id="ques2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     Select Answer
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a value="4">Strongly Agree</a></li>
-    <li><a value="3">Agree</a></li>
+    <li><a value="5">Strongly Agree</a></li>
+    <li><a value="4">Agree</a></li>
     <li><a value="2">Disagree</a></li>
     <li><a value="1">Strongly Disagree</a></li>
   </ul>
@@ -76,13 +76,13 @@
     </div>
 
 <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  <button class="btn btn-default dropdown-toggle" type="button" id="ques3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     Select Answer
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
-   <li><a value="4">Strongly Agree</a></li>
-    <li><a value="3">Agree</a></li>
+    <li><a value="5">Strongly Agree</a></li>
+    <li><a value="4">Agree</a></li>
     <li><a value="2">Disagree</a></li>
     <li><a value="1">Strongly Disagree</a></li>
   </ul>
@@ -93,13 +93,13 @@
       <h4 class="text-left"> When you hear music, you like to dance! </h4>
     </div>
 <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  <button class="btn btn-default dropdown-toggle" type="button" id="ques4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     Select Answer 
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a value="4">Strongly Agree</a></li>
-    <li><a value="3">Agree</a></li>
+    <li><a value="5">Strongly Agree</a></li>
+    <li><a value="4">Agree</a></li>
     <li><a value="2">Disagree</a></li>
     <li><a value="1">Strongly Disagree</a></li>
   </ul>
@@ -110,25 +110,22 @@
       <h4 class="text-left"> You love to travel and experience new cultures! </h4>
     </div>
 <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  <button class="btn btn-default dropdown-toggle" type="button" id="ques5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     Select Answer
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a value="4">Strongly Agree</a></li>
-    <li><a value="3">Agree</a></li>
-    <li><a value="2">Disagree</a></li>
-    <li><a value="1">Strongly Disagree</a></li>
+    <li><a class="Strongly Agree"    value="5">Strongly Agree</a></li>
+    <li><a class="Agree"             value="4">Agree</a></li>
+    <li><a class= "Disagree"         value="2">Disagree</a></li>
+    <li><a class="Strongly-Disagree" value="1">Strongly Disagree</a></li>
   </ul>
 
 </div>
 
-
-        <br>      
-
-             
-
-              <button type="submit" class="btn btn-primary submit">Submit</button>
+<br>      
+     
+     <button type="submit" id="submitbtn" class="btn btn-primary submit">Submit</button>
             </form>
 
           </div>
@@ -137,46 +134,103 @@
       </div>
     </div>
 
+    <div id="resultsModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
 
-    <footer class="footer">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">X</button>
+            <h2 class="modal-title"><strong>Your most compatible friend</strong></h2>
+          </div>
+          <div class="modal-body">
+            <h2 id="matchName"></h2>
+            <img id="matchImg" src ="" alt="" height="350" width="300">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" id="closeModal" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+ 
+
+ <footer class="footer">
       <div class="container">
-        <p><a href="/home">API home Link</a> | <a href="/survey">API Wait List</a> | <a href="git+https://github.com/remanriq/FriendFinder-.git">GitHub Repo</a></p>
+        <p><a href="/home">API home Link</a> | <a href="/api/friends">API friends List</a> | <a href="git+https://github.com/remanriq/FriendFinder-.git">GitHub Repo</a></p>
       </div>
     </footer>
 
   </div>
 
-</body>
-</html>
 
 <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
  <script type="text/javascript">
 
-  $(document).ready(function(){
-
-    var questions = 
-
+var currentURL = window.location.origin;
+// Capture the form inputs
 
 
+$("#submit").on("click", function(){
+
+//   $("button").click(function)(){
+//   $([select]"#Disagree").attr(2),
+//   $("Strongly-Disagree").attr(1),
+//   $("Agree").attr(4),
+//   $("Strongly-Agree").attr(5),
+
+// };
+
+
+//could not get my buttons to work//
 
 
 
+  //event.preventDefault();
+    ($('#name').val().trim() !== "") && ($('#photolink').val().trim() !== "") ) {
 
+        // Create an object for the user's data
+        var userData = {
+            name: $("#name").val(),
+            photo: $("#photolink").val(),
+            scores: [$("#Strongly-Disagree").val(),
+                     $("#Disagree").val(), 
+                     $("#Strongly-Agree").val(), 
+                     $("#Agree").val(), 
+                     ]
+        }
+        // AJAX post the data to the friends API.
+        $.post(currentURL + "/api/friends", userData, function(data){
+          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+          $("#matchName").text(data.name);
+          $('#matchImg').attr("src", data.photo);
+          // Show the modal with the best match
+          $("#resultsModal").modal('toggle');
+          // clear the input fields in the form
+          $("#name").val("");
+          $("#photo").val("");
+        });
+    } else {
+        $(".modal-title").text("Missing required information");
+        $(".modal-body").html("<h3>Complete the form before submitting</h3>");
+        $("#resultsModal").modal('toggle');
+    }
+    return false;
+});
+// modal //
+$('#closeModal').click(function() {
+    $.get('/',function(req,res){
+    location.replace(res);
 
-
-
-
-
-
-
-
-  }
+    })
+});
 
       
-      
+</script>
 
-
-//</script>
+</body>
+    </html>
 
 
 

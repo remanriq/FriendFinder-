@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.3",
+    "express": "^4.15.4",
     "init": "^0.1.2",
     "mysql": "^2.14.1",
     "path": "^0.12.7"
